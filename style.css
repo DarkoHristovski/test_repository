@@ -1,41 +1,200 @@
-*{
-padding: 0;
-margin: 0;
-box-sizing: border-box;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 /* ----- Global ----- */
 
-body{
+
+body {
     display: grid;
     grid-template-columns: 1440px;
-    grid-template-rows: 96px 292px 292px 292px 292px;
+    grid-template-rows: 96px 292px 292px auto auto;
     margin: 0 auto;
     justify-content: center;
+
+}
+nav, header, .rubber-duck, .emergency{
+    margin-bottom: 13px;
 }
 
-body > *{
-    border:1px solid black;
-}
 
-nav{
-    
+
+/* ----- Nav ----- */
+
+nav {
+
     justify-content: space-between;
     align-items: center;
     padding: 0 55px;
+    background-color: #EAEAEA;
 }
 
 nav,
-ul{
+ul {
     display: flex;
     justify-content: space-between;
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
     margin: 0 13px;
+
 }
 
-nav ul li a{
+.logo,
+nav ul li a {
+    background-color: #fff;
+    padding: 15px 20px;
+}
+
+nav ul li a {
     text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+/* ----- End Nav ----- */
+
+
+/* ----- Header ----- */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #C4C4C4;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+header p {
+    font-size: 18px;
+    max-width: 300px;
+}
+
+/* ----- End Header ----- */
+
+/* ----- Rubber duck ----- */
+
+.rubber-duck {
+    display: flex;
+    justify-content: center;
+    background-color: #C4C4C4;
+}
+
+.left-section,
+.right-section {
+    width: 50%;
+}
+
+.left-section,
+.right-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-section p {
+    max-width: 400px;
+    text-align: center;
+}
+
+button {
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: #fff;
+    padding: 10px 15px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+/* ----- End Rubber duck ----- */
+
+
+
+/* ----- Emergency ----- */
+.emergency {
+    display: flex;
+    align-items: center;
+    background-color: #C4C4C4;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.elements {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    grid-gap: 30px;
+}
+
+.elements a {
+    display: flex;
+    background-color: #EFEFEF;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    padding: 30px;
+    text-align: center;
+}
+
+/* ----- End Emergency ----- */
+
+/* ----- Contact ----- */
+
+.contact {
+    display: flex;
+    align-items: center;
+    background-color: #C4C4C4;
+    flex-direction: column;
+    padding: 70px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact input,
+.contact textarea {
+    background-color: #FCFCFC;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    border: 1px solid #FCFCFC;
+    ;
+}
+
+.contact input {
+    height: 33px;
+}
+
+.contact textarea {
+    height: 88px;
+    resize: none;
+}
+
+.contact button {
+    padding: 15px 20px;
+    align-self: center;
+    margin-top: 0;
 }
