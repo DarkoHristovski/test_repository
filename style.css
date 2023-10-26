@@ -80,7 +80,10 @@ button {
   padding: 6px 13px;
   color: #fff;
   cursor: pointer;
+  animation: change-color 5s infinite;
+
 }
+
 
 button:hover {
   transform: scale(0.9);
@@ -130,11 +133,6 @@ nav ul li a {
     animation: logo 5s infinite;
 }
 
-/* ----- Animation ----- */
-
-@keyframes logo {
-    50% {transform: rotate(180deg);}
-  }
 
 nav ul li a {
   text-decoration: none;
@@ -318,3 +316,20 @@ form {
   resize: none;
 }
 
+
+/* ----- Animation ----- */
+
+@keyframes logo {
+    50% {transform: rotate(180deg);}
+  }
+
+@keyframes change-color {
+    from { border: 1px solid #fff;
+        color: #fff;
+      
+        ;}
+    to {border: 1px solid #000;
+        color: #000;
+        
+    }
+  }
